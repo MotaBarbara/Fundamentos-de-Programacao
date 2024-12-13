@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Fundamentos de Programação: Variables</title>
+		<script>
+			let divisor = 3;
+			let resultado = ((1 + 2) * 4) / 2;
+			console.log('resultado:', resultado); // 6
+			console.log('divisao:', resultado / divisor); // 6 / 3 = 2
+
+			divisor = 4; // reassign variable
+			console.log('nova divisao:', resultado / divisor); // 6 / 4 = 1.5
+
+			let nome = 'Joana';
+			console.log(nome); // Joana
+
+			nome = 'Sara'; // reassign variable
+			console.log(nome); // Sara
+
+			// Variables: Are used to store data.
+			// 1. let: Used for variables that can be reassigned, with block-level scope.
+			// 2. const: Used for variables that should not be reassigned, also with block-level scope. (like id, should only be used once with the same name)
+			// 3. var: An older way to declare variables, used for variables that can be reassigned, with function-level scope - Do not use
+
+			// ----- So por curiosidade, Nao relevante para agora -----
+
+			// Block-level scope vs function-level scope
+			// Block-level scope**: Variables declared using `let` or `const` are limited to the block where they are defined. They are not accessible outside that block.
+			function example() {
+				if (true) {
+					let x = 10; // x is scoped to this block
+				}
+				console.log(x); // Error: x is not defined
+			}
+			// Function-level scope: Variables declared using var are scoped to the entire function, regardless of where they are declared inside the function. They are accessible throughout the function, even within blocks.
+			function example() {
+				if (true) {
+					var y = 20; // y is scoped to the function
+				}
+				console.log(y); // 20
+			}
+		</script>
+	</head>
+	<body></body>
+</html>
