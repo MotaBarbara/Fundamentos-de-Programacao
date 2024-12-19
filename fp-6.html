@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Fundamentos de Programação: Exercicio com Condicoes</title>
+		<script>
+			// Apenas adultos podem entrar na applicacao
+			let age = 22;
+			if (age >= 18) {
+				console.log('Podes entrar, tens idade suficiente (age)');
+			} else {
+				console.log('Nao podes entrar, nao tens idade suficiente (age)');
+			}
+
+			let ageTwo = prompt('Qual a tua idade (ageTwo)?');
+			if (ageTwo >= 18) {
+				console.log('Podes entrar, tens ' + ageTwo + ' anos, é idade suficiente');
+			} else {
+				console.log('Nao podes entrar ' + ageTwo + ' anos nao é idade suficiente');
+			}
+
+			let ageThree = prompt('Qual a tua idade (ageThree)?');
+			if (ageThree >= 18) {
+				console.log(`Podes entrar, tens ${ageThree} anos, é idade suficiente`);
+			} else {
+				console.log(`Nao podes entrar ${ageThree} anos nao é idade suficiente`);
+			}
+		</script>
+	</head>
+	<body></body>
+</html>

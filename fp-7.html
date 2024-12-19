@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Fundamentos de Programação: Arrays</title>
+		<script>
+			let animals = ['Cavalo', 'Zebra', 'Girafa', 'Burro'];
+			console.log(animals); // (4) ['Cavalo', 'Zebra', 'Girafa', 'Burro']
+			console.log(...animals); // Cao Cavalo Gato Pato Galinha
+
+			// Exercicio: Check all the items until find the 'Girafa'
+			if (animals[0] === 'Girafa') {
+				console.log(`Encontrei a ${animals[2]} na posicao 0`);
+			}
+			if (animals[1] === 'Girafa') {
+				console.log(`Encontrei a ${animals[2]} na posicao 1`);
+			}
+			if (animals[2] === 'Girafa') {
+				console.log(`Encontrei a ${animals[2]} na posicao 2`);
+			}
+			if (animals[3] === 'Girafa') {
+				console.log(`Encontrei a ${animals[2]} na posicao 3`);
+			}
+
+			// Simpler way
+			animals.forEach((animal, index) => {
+				if (animal === 'Girafa') {
+					console.log(`Encontrei a ${animal} na posicao ${index}`);
+				}
+			});
+
+			// push(): Adds elements to the end
+			animals.push('Mula');
+			console.log(animals);
+
+			// Exercicio: Criar um array com 5/6 modelos de carros, outro array com paises e outro com velocidades, um numero de 20 em 20.
+			let cars = ['Fiat', 'BMW', 'Opel', 'Mercedes', 'Audi'];
+			let countries = ['Portugal', 'Spain', 'France', 'The Netherlands', 'Belgium'];
+			let speed = ['20', '40', '60', '80', '100'];
+			let pos = prompt('Escolha uma posicao entre 0 e 4');
+
+			console.log(`${cars[pos]} está a andar em ${countries[pos]}, onde o limite de velocidade é ${speed[pos]}`);
+			console.log(cars[pos] + ' está a andar em ' + countries[pos] + ', onde o limite de velocidade é ' + speed[pos]);
+		</script>
+	</head>
+	<body></body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Fundamentos de Programação: Loops/Iteraction</title>
+		<script>
+			// Iteration precisa de 3 coisas para funcionar:
+			// 1. Initialization, initial state, 2. Condition, until when should the loop run, and 3. Increment, how to get to the conditon
+
+			let i = 1; // Initialization
+			while (i <= 30) {
+				// Condition, Runs until condition is false
+				console.log(i);
+				i += 1; // Increment, increment i + 1 on every loop
+			}
+
+			let animals = ['Cavalo', 'Zebra', 'Girafa', 'Burro'];
+			let x = 0;
+			while (x < animals.length) {
+				// animals.length = 4
+				console.log(animals[x]);
+				x++; // x = x + 1
+			}
+
+			// Exercicio 1: Mostrar numeros de 1 a 100
+			let y = 1;
+			while (y <= 100) {
+				console.log(y);
+				y++;
+			}
+
+			// Exercicio 2: Mostrar numeros de 2 a 200, de dois em dois
+			let a = 2;
+			while (a <= 200) {
+				console.log(a);
+				a = a + 2;
+			}
+
+			// Exercicio 3: Mostrar numeros de 100 a 1
+			let c = 100;
+			while (c >= 1) {
+				console.log(c);
+				c--;
+			}
+		</script>
+	</head>
+	<body></body>
+</html>
