@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Fundamentos de Programação: Objects</title>
+		<script>
+			// Arrays
+			const arr = ['toalha', 'garfo', 'prato', 'guardanapo', 'mesa', 'azeite', 'pao'];
+			// Objects
+			const obj = {
+				mobilia: 'mesa',
+				utensilios: ['garfo', 'prato', 'guardanapo'], // array inside object
+				essenciais: 'toalha',
+				alimentos: ['azeite', 'pao'],
+			};
+			console.log(obj.essenciais); // toalha
+			console.log(obj.utensilios); // (3) ['garfo', 'prato', 'guardanapo']
+
+			// ------------
+			// 1. Exercicio: criar obj a representar um super vilao com info sobre ele
+
+			const superVillain = {
+				name: 'Joker',
+				favoriteColor: 'Green',
+				utensils: ['Knife', 'Letter'],
+				characteristics: ['Torn Mouth', 'Constant Smile', 'Pure Evil', 'Radiant Makeup'],
+				power: ['Intelligence', 'Strength', 'Improvise Skills'],
+				victim: [],
+				action: function (victimName) {
+					// this.victim = this.victim + victimName; // Solution 1 -> victim: ['AnaAfonso'],
+					this.victim.push(victimName); // Solution 2: add victims to list correctly -> victim: ['Ana', 'Afonso'],
+				},
+			};
+			console.log(`The Super Villain ${superVillain.name} likes the color ${superVillain.favoriteColor} and his powers are ${superVillain.power}`);
+
+			// 1.1. Add victims
+			superVillain.action('Ana');
+			superVillain.action('Afonso');
+
+			// 1.2. Show list of victims
+			// console.log(`${superVillain.name} victim list: ${superVillain.victim}`); // Solution 1: Joker victim list: AnaAfonso
+			console.log(`${superVillain.name} victim list: ${superVillain.victim.join(', ')}`); // Solution 2: Joker victim list: Ana, Afonso
+		</script>
+	</head>
+	<body></body>
+</html>

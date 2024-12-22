@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Fundamentos de Programação: Exercicio Objects</title>
+		<script>
+			// Exercicio: Criar funcao que consegue dizer qual o numero menor entre dois numeros
+			// eg. min(5, 89) // resultado: 5
+
+			function min(value1, value2) {
+				if (value1 < value2) {
+					console.log(`Resultado: ${value1}`);
+				} else if (value1 > value2) {
+					console.log(`Resultado: ${value2}`);
+				} else {
+					console.log(`Resultado: ${value1} = ${value2}`);
+				}
+			}
+			min(75, 7); // Resultado: 7
+			min(9, 43); // Resultado: 9
+			min(11, 11); // Resultado: 11 = 11
+		</script>
+	</head>
+	<body></body>
+</html>

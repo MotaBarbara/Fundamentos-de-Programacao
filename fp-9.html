@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Fundamentos de Programação: Funções</title>
+		<script>
+			// 1. Example 1
+			let username = ['Julieta', 'Bernardo', 'Vasco', 'Julia'];
+			let i = 0;
+
+			// 1.1. Declare Function
+			function greeting() {
+				while (i < username.length) {
+					console.log(`Bom dia, ${username[i]}`);
+					i++;
+				}
+			}
+
+			// 1.2. Call Function
+			greeting();
+
+			// ------------
+			// 2. Example 2
+			// 2.1. Declare Function
+			function greetingX(username) {
+				console.log(`Bom dia, ${username}`);
+				// console.log('Bom dia, ' + username);
+			}
+			// 2.2. Call Function
+			greetingX('Julieta Lopes');
+			greetingX('Bernardo Mota');
+			greetingX('Vasco Santos');
+			greetingX('Julia Duarte');
+
+			// ------------
+			// 3. Example 3 - With date
+			// 3.1. Declare Function
+			function greetingY(username) {
+				const date = new Date();
+				// console.log(date.getHours()); // -> Current Hour
+				let statement = 'Boa noite';
+				if (date.getHours() < 13) {
+					statement = 'Bom dia';
+				}
+				if (date.getHours() < 20) {
+					statement = 'Bom tarde';
+				}
+				console.log(statement + ', ' + username);
+			}
+			// 3.2. Call Function
+			greetingY('Julieta Ribeiro');
+			greetingY('Bernardo Ferreira');
+			greetingY('Vasco Oliveira');
+			greetingY('Julia Afonso');
+
+			// ------------
+			// 4. Exercicio - criar funcao que soma dois valores e depois diz o resultado desta forma: 'a soma de X e Y deu RESULTADO'
+			// 4.1. eg. sum (4, 8)
+			// 4.2. output: 'a soma de 4 e 8 deu 12'
+			function sum(value1, value2) {
+				const result = value1 + value2;
+				console.log(`a soma de ${value1} e ${value2} deu ${result}`);
+			}
+			sum(4, 8);
+			sum(14, 2);
+
+			// ------------
+			// 5. Exercicio - With Prompt
+			let x = prompt('Value 1');
+			let y = prompt('Value 2');
+
+			// 5.1. Prompt always receives a string -> convert to number with parseInt
+			// parseInt function converts argument to a string, parses that string, then returns an integer or NaN
+			let xNum = parseInt(x);
+			let yNum = parseInt(y);
+
+			// 5.2. Declare Function
+			function sumP(value1, value2) {
+				const result = value1 + value2;
+				console.log(`a soma de ${value1} e ${value2} deu ${result}`);
+			}
+
+			// 5.3. Call Function
+			sumP(xNum, yNum);
+		</script>
+	</head>
+	<body></body>
+</html>

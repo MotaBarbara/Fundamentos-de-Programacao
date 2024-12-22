@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Fundamentos de Programação: Sistema de avaliacao de alunos</title>
+		<script>
+			// Exercicio: Dependendo da nota que os alunos recebem, a mensagem que irá aparecer ao user sera diferente
+			//  0 - 9 = negativo, 10 - 14 = suficiente, 15 - 18 = Bom, 19 - 20 = Excelente
+			function avaliacao(aluno, nota) {
+				let avaliacaoQualitativa;
+				if ((nota <= 18) && (nota >= 15)) {
+					avaliacaoQualitativa = 'Bom';
+				} else if ((nota <= 14) && (nota >= 10)) {
+					avaliacaoQualitativa = 'Suficiente';
+				} else if (nota <= 9) {
+					avaliacaoQualitativa = 'Negativo';
+				} else {
+					avaliacaoQualitativa = 'Excelente';
+				}
+				console.log(`${aluno} teve ${nota} que é ${avaliacaoQualitativa}`);
+			}
+			avaliacao('Ana', 7);
+			avaliacao('Rafael', 19);
+			avaliacao('Bárbara', 15);
+			avaliacao('Mariana', 12);
+		</script>
+	</head>
+	<body></body>
+</html>
